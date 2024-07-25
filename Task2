@@ -1,0 +1,41 @@
+def calculate_average(*marks):
+    return sum(marks) / len(marks)
+
+def calculate_cgpa(average_marks):
+    return average_marks / 10
+
+def calculate_grade(marks):
+    if marks >= 95:
+        return 'O'
+    elif marks >= 90:
+        return 'A++'
+    elif marks >= 80:
+        return 'A'
+    elif marks >= 70:
+        return 'B'
+    elif marks >= 60:
+        return 'C'
+    else:
+        return 'Failed'
+
+def main():
+    Sub1 = int(input("Enter marks of 1st subject: "))
+    Sub2 = int(input("Enter marks of 2nd subject: "))
+    Sub3 = int(input("Enter marks of 3rd subject: "))
+    Sub4 = int(input("Enter marks of 4th subject: "))
+    Sub5 = int(input("Enter marks of 5th subject: "))
+
+    average_marks = calculate_average(Sub1, Sub2, Sub3, Sub4, Sub5)
+
+    cgpa = calculate_cgpa(average_marks)
+
+    grade = calculate_grade(average_marks)
+
+    print("Average marks:  ",average_marks)
+    print("CGPA: ",cgpa) 
+    print("Grade: ",grade)  
+ 
+if __name__ == "__main__":
+    main()
+    
+    
